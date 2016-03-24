@@ -1,5 +1,6 @@
 import {App, events, register, routing, web} from 'platypus';
 import HomeViewControl from '../viewcontrols/home/home.vc';
+import GreetingViewControl from '../viewcontrols/greeting/greeting.vc';
 
 export default class MyApp extends App {
     constructor(router: routing.Router, config: web.IBrowserConfig) {
@@ -9,7 +10,8 @@ export default class MyApp extends App {
 
         // The pattern is the part AFTER the slash
         router.configure([
-            { pattern: '', view: HomeViewControl }
+            { pattern: '', view: HomeViewControl },
+            { pattern: 'greet/:nameToGreet', view: GreetingViewControl }
         ]);
     }
 
