@@ -10,6 +10,8 @@ export default class HomeViewControl extends BaseViewControl {
     
     greet(): void {
         alert(`Greetings, ${this.context.name}!`);
+        // Line above is the same as:
+        // alert('Greetings, ' + this.context.name + '!');
     }
 }
 
